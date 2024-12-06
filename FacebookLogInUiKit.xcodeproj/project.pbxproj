@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A8CC4A4E2D02E3F8005BED6E /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = A8CC4A4D2D02E3F8005BED6E /* FacebookCore */; };
+		A8CC4A502D02E3F8005BED6E /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = A8CC4A4F2D02E3F8005BED6E /* FacebookLogin */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		A8CC4A342D02E325005BED6E /* FacebookLogInUiKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacebookLogInUiKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8CC4A502D02E3F8005BED6E /* FacebookLogin in Frameworks */,
+				A8CC4A4E2D02E3F8005BED6E /* FacebookCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +85,8 @@
 			);
 			name = FacebookLogInUiKit;
 			packageProductDependencies = (
+				A8CC4A4D2D02E3F8005BED6E /* FacebookCore */,
+				A8CC4A4F2D02E3F8005BED6E /* FacebookLogin */,
 			);
 			productName = FacebookLogInUiKit;
 			productReference = A8CC4A342D02E325005BED6E /* FacebookLogInUiKit.app */;
@@ -107,6 +116,9 @@
 			);
 			mainGroup = A8CC4A2B2D02E325005BED6E;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A8CC4A4C2D02E3F8005BED6E /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A8CC4A352D02E325005BED6E /* Products */;
 			projectDirPath = "";
@@ -335,6 +347,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A8CC4A4C2D02E3F8005BED6E /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A8CC4A4D2D02E3F8005BED6E /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8CC4A4C2D02E3F8005BED6E /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		A8CC4A4F2D02E3F8005BED6E /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8CC4A4C2D02E3F8005BED6E /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A8CC4A2C2D02E325005BED6E /* Project object */;
 }
